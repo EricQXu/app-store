@@ -1,0 +1,27 @@
+{
+    "name": "App Store",
+    "short_name": "market",
+    "start_url": "home.html",
+    "display": "standalone",
+    "theme_color": "#695CFE",
+    "background_color": "#E4E9F7",
+    "scope": ".",
+    "description": "a cross-platform app store",
+    "icons": [
+        {
+            "sizes": "1024x1024",
+            "src": "assets/icon1024.png",
+            "type": "image/png"
+        },
+        {
+            "sizes": "512x512",
+            "src": "assets/icon512.png",
+            "type": "image/png"
+        },
+        {
+            "sizes": "256x256",
+            "src": "assets/icon256.png",
+            "type": "image/png"
+        }
+    ]
+}

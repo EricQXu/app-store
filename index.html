@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Store</title>
+    <link rel="stylesheet" href="coverStyle.css">
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="manifest" href="manifest.json">
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker && navigator.serviceWorker.register("./sw.js");
+        });
+      }
+    </script>
+    <script defer src="./AppStoreInstallation.js"></script>
+</head>
+<body>
+    <div class="topnav">
+        <img src="./appstorefavicon.png" width="30px">
+        <a href="index.html">App Store</a>
+        <a class="active" href="docs.html">Docs</a>
+        <a href="about.html">About</a>
+        <a class="github-link" href="https://github.com/EricQXu/passion-project">Github</a>
+    </div>
+    <h1 class="coverHeading">App Store</h1>
+    <p class="coverDescription">The ultimate cross-platform app store built by the people, for the people<br><br><br><p>
+    <img src="" id="coverScreenshot" class="center">
+    <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function(event) {
+      let coverScreenshot = document.getElementById('coverScreenshot');
+      let coverScreenshots = ['windows-mockup.png', 'mac-mockup.png', 'linux-mockup.png'].map(src => {
+        let img = new Image();
+        img.src = src;
+        return img;
+      });
+      let i = 0;
+
+      coverScreenshot.src = coverScreenshots[i].src;
+
+      setInterval(function() {
+        i = (i + 1) % coverScreenshots.length;
+        coverScreenshot.style.opacity = 0;
+        setTimeout(function() {
+          coverScreenshot.src = coverScreenshots[i].src;
+          coverScreenshot.style.opacity = 1;
+        }, 500);
+      }, 2000);
+    });
+    </script>
+    <div class="installBtnContainer">
+        <div class="installBtn">
+            <button id = "installBtn" class="btn">Install App</button>
+        </div>
+    </div>
+</body>
+</html>

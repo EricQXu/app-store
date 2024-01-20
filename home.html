@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="flickity.css" media="screen">
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="manifest" href="manifest.json">
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker && navigator.serviceWorker.register("./sw.js");
+        });
+      }
+    </script>
+    <script defer src="./script.js"></script>
+    <script defer src="./flickity.pkgd.min.js"></script>
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="logo.png" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">App Store</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="home.html">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Home</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="create.html">
+                            <i class='bx bx-bar-chart-alt-2 icon' ></i>
+                            <span class="text nav-text">Create</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="work.html">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">Work</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="entertainment.html">
+                            <i class='bx bx-pie-chart-alt icon' ></i>
+                            <span class="text nav-text">Entertainment</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="social.html">
+                            <i class='bx bx-heart icon' ></i>
+                            <span class="text nav-text">Social</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="develop.html">
+                            <i class='bx bx-wallet icon' ></i>
+                            <span class="text nav-text">Develop</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+                
+            </div>
+        </div>
+
+    </nav>
+
+    <section class="home">
+        <div class="text">Home</div>
+        <main>
+            <div class="carousel js-flickity"
+                data-flickity-options='{ "wrapAround": true, "autoPlay": 4000 }'>
+                <div class="carousel-cell"><a href=””><img src="featuredCarousel/chrome.png" alt="chrome" /></a></div>
+                <div class="carousel-cell"><a href=””></a><img src="featuredCarousel/vsCode.png" alt="vsCode" /></a></div>
+                <div class="carousel-cell"><a href=””></a><img src="featuredCarousel/resolve.png" alt="resolve" /></a></div>
+                <div class="carousel-cell"><a href=””></a><img src="featuredCarousel/steam.png" alt="steam" /></a></div>
+                <div class="carousel-cell"><a href=””></a><img src="featuredCarousel/pycharm.png" alt="pycharm" /></a></div>
+            </div>
+        </main>
+    </section>
+  </body>
+</html>
