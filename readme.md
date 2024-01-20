@@ -1,5 +1,5 @@
 ﻿# Cross-platform App Store PWA
-This is an installable cross-platform App Store PWA that has offline caching support. This is a project currently under development. Feel free to contribute if you are on my team!
+This is an installable cross-platform App Store PWA that has offline caching support. This is a project currently under development. Feel free to contribute if you are on my CruzHacks team!
 
 ## How to Install
 Open up your Terminal and type the following:
