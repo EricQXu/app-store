@@ -7,9 +7,9 @@ cd /Applications
 if ls -l | grep -i "Google Chrome" &> /dev/null; then
 	echo "Google Chrome is already installed on this machine!"
 elif command -v brew &> /dev/null; then
-	# install brew package google-chrome
-	echo "Installing Google Chrome..." && brew install --cask google-chrome && echo "Google Chrome has been successfully installed"
+	# install brew package evernote
+	echo "Installing Google Chrome..." && brew install --cask evernote && echo "Google Chrome has been successfully installed"
 else
-	# install homebrew and then install brew package google-chrome
-	echo "Homebrew, a package manager that installs the requested app via command line, is not installed on this system" && echo "Installing Homebrew..." && /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" && (echo; echo 'eval "$(/usr/local/bin/brew shellenv)"') >> ~/.zprofile && eval "$(/usr/local/bin/brew shellenv)" && echo "Homebrew package manager has been successfully installed and added to PATH" && echo "Installing Google Chrome from Homebrew Package Manager..." && brew install --cask google-chrome && echo "Google Chrome has been successfully installed."
+	# install homebrew and then install brew package evernote
+	echo "Homebrew, a package manager that installs the requested app via command line, is not installed on this system" && echo "Installing Homebrew..." && /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" && (echo; echo 'eval "$(/usr/local/bin/brew shellenv)"') >> ~/.zprofile && eval "$(/usr/local/bin/brew shellenv)" && echo "Homebrew package manager has been successfully installed and added to PATH" && echo "Installing Google Chrome from Homebrew Package Manager..." && brew install --cask evernote && echo "Google Chrome has been successfully installed."
 fi
