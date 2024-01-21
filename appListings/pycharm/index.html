@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App Store</title>
-    <link rel="stylesheet" href="develop.css">
+    <title>GarageBand</title>
     <link rel="stylesheet" href="style.css">
     <!----===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
@@ -100,22 +99,49 @@
     </nav>
 
     <section class="home">
-        <div class="text">Develop</div>
-        <div class="app-container">
-        <div class="app">
-        <img src="https://yt3.googleusercontent.com/_q52i8bUAEvcb7JR4e-eNTv23y2A_wg5sCz0NC0GrGtcw1CRMWJSOPVHUDh_bngD0q4gMvVeoA=s900-c-k-c0x00ffffff-no-rj">
-        <div class="app-content">
-        <h3>Visual Studio Code</h3>
-        <a href="./appListings/vscode/index.html" class="btn" target="_blank">Details</a>
-        </div>
-        </div>
-        <div class="app">
-        <img src="https://www.jetbrainsmerchandise.com/media/catalog/product/cache/9de2cbab405d38079f6e94f2fde72752/j/b/jbst-016_pycharm_2.png">
-        <div class="app-content">
-        <h3>PyCharm</h3>
-        <a href="https://www.jetbrains.com/pycharm/" class="btn" target="_blank">Details</a>
-        </div>
-        </div>
+        <!--You can use class "text"-->
+        <header class="pageHeader">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/PyCharm_Icon.svg/1200px-PyCharm_Icon.svg.png" alt="app icon" style="width:80px; height:80px; align:left; margin-top:40px; margin-left:35px;">
+            <h1 style="margin-left:60px; padding:20px; margin-top:-10px" >PyCharm</h1>
+            <p class="description">The Best IDE For Python!</p>
+            <button onclick="downloadFile()" class="download" id="download"> Download</button>
+            <p class="incompatibleMsg" id="incompatibleMsg">&#9888; Your device isn't compatible with this app.</p>
+            <p></p>
+        </header>
+        <main>
+            <div class="slider" style="margin-left: 25px;">
+                <div class="slides">
+                    <div id="slide-1">
+                        <img id="img-1" src="https://www.jetbrains.com/pycharm/img/screenshots/simpleLook@2x.jpg" alt="Screenshot 1"/>
+                    </div>
+                    <!-- <div id="slide-2">
+                        <img id="img-2" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource124/v4/f0/4b/70/f04b70dc-91c1-802b-fef1-f50d3de5c567/c8e87946-453e-40dc-8e49-fb9fb5bbf372_02._GB_104_Guitar_Hero__U0028US_U0029.png/2880x0w.webp" alt="Screenshot 2"/>
+                    </div>
+                    <div id="slide-3">
+                        <img id="img-3" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource124/v4/b4/db/de/b4dbde96-4d5b-fd69-23e5-4580f11d3597/b2ee6a5d-3be5-40b6-8377-2637c820d7cb_03._GB_104_Loop_Hero__U0028US_U0029.png/2880x0w.webp" alt="Screenshot 3"/>
+                    </div>
+                    <div id="slide-4">
+                        <img id="img-4" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource114/v4/ec/21/15/ec2115a7-d972-fe59-9e29-2ef3e44b1976/c42c7b78-1226-4ce9-a229-fdfbc3823cf8_04._GB_104_Keyboard_Hero__U0028US_U0029.png/2880x0w.webp" alt="Screenshot 4"/>
+                    </div>
+                    <div id="slide-5">
+                        <img id="img-5" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource124/v4/a6/23/95/a62395c7-3a39-de13-e202-7928e1dde9e3/2b48564f-8e4d-4434-aa62-2a2b84b62be9_05._GB_104_Mixing_Hero__U0028US_U0029.png/2880x0w.webp" alt="Screenshot 5"/>
+                    </div>
+                    <div id="slide-6">
+                        <img id="img-6" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource114/v4/03/95/fc/0395fcab-2412-2b79-9d3b-798cd1b8fc59/67f1f472-6f91-4bb5-bef4-94e50ee37d08_06._GB_104_Learn_to_Play__U0028US_U0029.png/2880x0w.webp" alt="Screenshot 6"/>
+                    </div> -->
+                </div>
+            </div>
+            <h2>Description</h2>
+            <p>PyCharm is designed by programmers, for programmers, to provide all the tools you need for productive Python development.
+            </p>
+            <p id="textarea" style="display:none;">Write neat and maintainable code while the IDE helps you keep control of the quality with PEP8 checks and integrated Black formatter, testing assistance, smart refactorings, and a host of inspections.</p>
+            <a id="seeMore" onclick="toggleSeeMore()" href="javascript:void(0);" style="color:black; margin-left:35px;">See More</a>
+            <h2>Reviews</h2>
+            <h2>4/5</h2>
+        </main>
+    </section>
+
     <script src="script.js"></script>
+    <script src="expandText.js"></script>
   </body>
 </html>
