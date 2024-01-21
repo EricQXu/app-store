@@ -9,13 +9,13 @@ function showHideDLbtn(download, incompatibleMsg) {
     } else if (os === 'iOS') {
         url = '';
     } else if (os === 'Windows') {
-        document.getElementById('download').style.display = 'none'; //Will hide download btn
-        document.getElementById('incompatibleMsg').style.display = 'block'; //Will show msg
+        document.getElementById('incompatibleMsg').style.display = 'none'; //Will hide msg
+        document.getElementById('download').style.display = 'block'; //Will show download btn
     } else if (os === 'Android') {
         url = '';
     } else if (os === 'Linux') {
-        document.getElementById('download').style.display = 'none'; //Will hide download btn
-        document.getElementById('incompatibleMsg').style.display = 'block'; //Will show msg
+        document.getElementById('incompatibleMsg').style.display = 'none'; //Will hide msg
+        document.getElementById('download').style.display = 'block'; //Will show download btn
     }    
 }
 	
