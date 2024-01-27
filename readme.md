@@ -9,29 +9,25 @@ Open up your Terminal and type the following:
  Then, open `~/Downloads/passion-project-html-main` in VS Code. Inside VS Code, install the Live Server extension. After that, open `index.html` and right-click and click "Open with Live Server". (If the webpage opens with a non-Chromium based browser, paste the URL into a Chromium-based browser.) Now, you will see the install button on the URL bar and you can now install it.
 
 ## To-do
-- [optional] add/remove comments and/or clean up codebase by grouping files of same category together (we don't have to do this, but we should do this if we are going to re-write the project later on or do something with it in the future after the hackathon)
-- [optional] prompt user to switch browsers to a Chromium-based browser if they are using Firefox or a Firefox-based browser upon load on landing page (index.html) 
+- attach links to apps in carousel on home.html
+- clean up codebase
+- attach the correct install script to the correct app info page and fix install script if there are any issues
+- change purple accent color and highlight color to some other color
 - [experimental feature] test if ```sudo mount .dmg```, ```sudo cp .app /Applications```, ```sudo umount .dmg``` works
 - [experimental feature] if the above works great, maybe re-consider reworking scripts to do that instead of homebrew
-- [planning] create a mockup of home.html, create.html, work.html, entertainment.html, social.html, and develop.html
-- [feature] make the mockup of the above into reality by coding it
-- [feature] attach links to apps in carousel on home.html
-- [feature] add app ratings and other features/sections (see your OS's built-in App Store as an example) into the garageband app page
-- [feature] duplicate the garageband app info page and make a page for every app and link it to home.html, create.html, etc.
-- [optional feature] add a "Buy Me a Coffee" button for donations and "Contribute" button that links to the GitHub repo page on the left navbar
-- [bug] fix light/dark/system theme mode inconsistency between the main pages and app info page (JS: I forgot if it was embeded inside an HTML or if it was an external JS file, but anyways, fix it there)
-- [bug] fix bug where when you click on "Home", it takes you to index.html instead of home.html
-- [bug] fix wrong icons in the left navbar
-- [cosmetic] change purple accent color and highlight color to some other color
-- [cosmetic] 
+
+### Bugs to Clean Up
+- fix light/dark/system theme mode inconsistency between the main pages and app info page (JS: I forgot if it was embeded inside an HTML or if it was an external JS file, but anyways, fix it there)
+- fix wrong icons in the left navbar
 - [bug fix] fix broken search box on index.html and create.html and ... (maybe integrate in-website Google Search to search your site?) OR just delete the search bar altogether
-- [feature] include screenshot on landing page (index.html) (screenshot 1: Windows 11, screenshot 2: macOS Ventura/Sonoma, screenshot 3: Linux Arch w/ Hyprland)
-- [feature] deploy web app to Vercel (not GoDaddy since we may lose access to the domain after CruzHacks)
 
+### Optional Features
+- prompt user to switch browsers to a Chromium-based browser if they are using Firefox or a Firefox-based browser upon load on landing page (index.html)
+- add a "Buy Me a Coffee" button for donations and "Contribute" button that links to the GitHub repo page on the left navbar
 
-If time allows...
+### We might do this if we have time (or you can contribute to this part!):
 - [feature] implement "sign-in with Google" button with favorited apps for each user
-- [cosmetic] implement gaussian blur into the website
+- [cosmetic] implement gaussian blur into the website ⚠️  Doesn't sound possible without a re-write, but we'll try
 - [AI feature] implement AI summaries of user-written reviews
 - [AI feature] implement AI recommendations of each app (ex. pros vs. cons of different web browser and which web browser is best for which group of people)
 - [AI feature] implement a help section in the navbar where you can ask AI for app recommendations
