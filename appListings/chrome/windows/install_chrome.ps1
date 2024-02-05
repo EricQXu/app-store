@@ -3,8 +3,8 @@
 	run in Terminal: "set-executionpolicy bypass -scope process" (without quotes)
 	run in Terminal: "powershell -file %USERPROFILE%\Downloads\test.ps1" (without quotes) 
 #>
-if exist "C:\Program Files\Sublime Text\sublime_text.exe" (
-    echo "Sublime Text 4 is already installed on this system"
+if exist "C:\'Program Files (x86)'\Google\Chrome\Application\chrome.exe" (
+    echo "Google Chrome is already installed on this system"
 ) else (
-    echo "Installing Sublime Text 4..."; winget install --id=SublimeHQ.SublimeText.4  -e; echo "Sublime Text 4 installed"
+    echo "Installing Google Chrome..."; winget install -e --id Google.Chrome; echo "Google Chrome installed"
 )

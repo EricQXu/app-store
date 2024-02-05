@@ -1,5 +1,5 @@
 #!/bin/bash
-# before running this script, go into terminal and run "chmod +x vlc.sh" (without quotes) after changing directory (cd) into the directory where this file is located in terminal
+# before running this script, go into terminal and run "chmod +x chrome.sh" (without quotes) after changing directory (cd) into the directory where this file is located in terminal
 if [ -f /etc/os-release ]; then
     # freedesktop.org and systemd
     . /etc/os-release
@@ -29,34 +29,34 @@ else
     OS=$(uname -s)
     VER=$(uname -r)
 fi
-echo "Detected OS: $OS" && echo "Installing VLC for $OS..."
+echo "Detected OS: $OS" && echo "Installing Google Chrome for $OS..."
 if [ "$OS" == "Linux Debian" ] || [ "$OS" == "Linux Ubuntu" ] || [ "$OS" == "Linux Mint" ] || [ "$OS" == "Linux PopOS" ] || [ "$OS" == "Linux ZorinOS" ] || [ "$OS" == "Linux Kubuntu" ] || [ "$OS" == "Linux ZorinOS" ]; then
-    if command -v vlc &> /dev/null
+    if command -v google-chrome &> /dev/null
     then
-        echo "VLC is already installed on this system."
+        echo "Google Chrome is already installed on this system."
     else
-        sudo apt update && sudo apt install vlc && echo "VLC installed"
+        sudo apt update && sudo apt install google-chrome && echo "Google Chrome installed"
     fi
 elif [ "$OS" == "Linux Arch" ] || [ "$OS" == "Linux Manjaro" ] || [ "$OS" == "Linux Arctix" ] || [ "$OS" == "Linux SteamOS" ]; then
-    if command -v vlc &> /dev/null
+    if command -v google-chrome &> /dev/null
     then
-        echo "VLC is already installed on this system."
+        echo "Google Chrome is already installed on this system."
     else
-        sudo pacman -Syu vlc && echo "VLC installed"
+        sudo pacman -Syu google-chrome && echo "Google Chrome installed"
     fi
 elif "$OS" == "Linux Manjaro"; then
-    if command -v vlc &> /dev/null
+    if command -v google-chrome &> /dev/null
     then
-        echo "VLC is already installed on this system."
+        echo "Google Chrome is already installed on this system."
     else
-        pamac install vlc && echo "VLC installed"
+        pamac install google-chrome && echo "Google Chrome installed"
     fi
 elif [ "$OS" == "Linux Fedora" ] || [ "$OS" == "Linux CentOS" ] || [ "$OS" == "Linux Red Hat" ] || [ "$OS" == "Linux Red Hat Enterprise" ]; then
-    if command -v vlc &> /dev/null
+    if command -v google-chrome &> /dev/null
     then
-        echo "VLC is already installed on this system."
+        echo "Google Chrome is already installed on this system."
     else
-        sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm && sudo dnf install vlc && echo "VLC installed"
+        sudo dnf install fedora-workstation-repositories && sudo dnf config-manager --set-enabled google-chrome && sudo dnf install google-chrome-stable && echo "Google-Chrome installed"
     fi
 elif "$OS" == "Linux AmongOS"; then
     echo "You are sus. Out of all the distros out there, why would you pick AmongOS to daily drive? Only one word: sus!"
