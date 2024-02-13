@@ -15,6 +15,7 @@
     --primary-color-light: #F6F5FF;
     --toggle-color: #DDD;
     --text-color: #707070;
+    --headerTwo-color: black;
 
     /* ====== Transition ====== */
     --tran-03: all 0.2s ease;
@@ -41,6 +42,15 @@ body.dark{
     --primary-color-light: #3a3b3c;
     --toggle-color: #fff;
     --text-color: #ccc;
+}
+
+h2{
+    color: var(--headerTwo-color);
+    transition: var(--tran-05);
+}
+
+body.dark h2{
+    --headerTwo-color: #ccc;
 }
 
 /* ===== Sidebar ===== */

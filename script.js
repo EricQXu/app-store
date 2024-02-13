@@ -14,13 +14,33 @@ searchBtn.addEventListener("click" , () =>{
     sidebar.classList.remove("close");
 })
 
-modeSwitch.addEventListener("click" , () =>{
-    body.classList.toggle("dark");
+// # Single mode switch (not dynamic):
+// modeSwitch.addEventListener("click" , () =>{
+//     body.classList.toggle("dark");
     
-    if(body.classList.contains("dark")){
-        modeText.innerText = "Light mode";
-    }else{
-        modeText.innerText = "Dark mode";
+//     if(body.classList.contains("dark")){
+//         modeText.innerText = "Light mode";
+//     }else{
+//         modeText.innerText = "Dark mode";
         
+//     }
+// });
+
+modeSwitch.addEventListener("click", () => {
+    body.classList.toggle("dark");
+    if (body.classList.contains("dark")) {
+      modeText.innerText = "Light mode";
+      localStorage.setItem("darkMode", "true");
+    } else {
+      modeText.innerText = "Dark mode";
+      localStorage.setItem("darkMode", "false");
+    }
+  });
+  
+document.addEventListener('DOMContentLoaded', function() {
+    if (localStorage.getItem("darkMode") === "true") {
+        document.body.classList.add('dark');
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
     }
 });
