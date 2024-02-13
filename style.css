@@ -44,12 +44,12 @@ body.dark{
     --text-color: #ccc;
 }
 
-h2{
+.TitleSizeTwo{
     color: var(--headerTwo-color);
     transition: var(--tran-05);
 }
 
-body.dark h2{
+body.dark .TitleSizeTwo{
     --headerTwo-color: #ccc;
 }
 
