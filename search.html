@@ -5,11 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>App Store</title>
-    <link rel="stylesheet" href="develop.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="search.css">
+    <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
     <!----===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="manifest" href="manifest.json">
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker && navigator.serviceWorker.register("./sw.js");
+        });
+      }
+    </script>
+    <script defer src="./script.js"></script>
+    <script defer src="./flickity.pkgd.min.js"></script>
 </head>
 <body>
     <nav class="sidebar close">
@@ -29,6 +38,11 @@
 
         <div class="menu-bar">
             <div class="menu">
+
+                <!-- <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li> -->
 
                 <ul class="menu-links">
                     <li class="nav-link">
@@ -72,7 +86,7 @@
                             <span class="text nav-text">Develop</span>
                         </a>
                     </li>
-                    
+
                     <li class="nav-link">
                         <a href="search.html">
                             <i class='bx bx-search icon' ></i>
@@ -101,22 +115,17 @@
     </nav>
 
     <section class="home">
-        <div class="text">Develop</div>
-        <div class="app-container">
-        <div class="app">
-        <img src="https://yt3.googleusercontent.com/_q52i8bUAEvcb7JR4e-eNTv23y2A_wg5sCz0NC0GrGtcw1CRMWJSOPVHUDh_bngD0q4gMvVeoA=s900-c-k-c0x00ffffff-no-rj">
-        <div class="app-content">
-        <h3>Visual Studio Code</h3>
-        <a href="./appListings/vscode/index.html" class="btn">Details</a>
-        </div>
-        </div>
-        <div class="app">
-        <img src="https://www.jetbrainsmerchandise.com/media/catalog/product/cache/9de2cbab405d38079f6e94f2fde72752/j/b/jbst-016_pycharm_2.png">
-        <div class="app-content">
-        <h3>PyCharm</h3>
-        <a href="./appListings/pycharm/index.html" class="btn">Details</a>
-        </div>
-        </div>
-    <script src="script.js"></script>
+        <div class="text">Search & Help</div>
+        <main>
+            <h2>Search<br><br></h2>
+            <p>--------------- Search Here ------------------</p>
+            <p><br><br><br><br><br><br><br></p>
+            
+            <img src="geminiAnimation.gif">
+            <h2>Not sure which app is right for you? Ask us!<br><br></h2>
+            <p>--Try asking "Which browser is best for me?"--</p>
+            <p>------------------ Result --------------------</p>
+        </main>
+    </section>
   </body>
 </html>

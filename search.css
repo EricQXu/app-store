@@ -9,13 +9,14 @@
 
 :root{
     /* ===== Colors ===== */
-    --body-color: #E4E9F7;
-    --sidebar-color: #FFF;
+    --body-color: #000000;
+    --sidebar-color: #cecece;
     --primary-color: #695CFE;
     --primary-color-light: #F6F5FF;
     --toggle-color: #DDD;
     --text-color: #707070;
-    --headerTwo-color: black;
+    --text-color-home: #e7e7e7;
+    --headerTwo-color: white;
 
     /* ====== Transition ====== */
     --tran-03: all 0.2s ease;
@@ -36,7 +37,7 @@ body{
 }
 
 body.dark{
-    --body-color: #18191a;
+    --body-color: #000000;
     --sidebar-color: #242526;
     --primary-color: #3a3b3c;
     --primary-color-light: #3a3b3c;
@@ -305,103 +306,24 @@ body.dark .switch::before{
 .home .text{
     font-size: 30px;
     font-weight: 500;
-    color: var(--text-color);
-    padding: 12px 60px;
+    color: var(--text-color-home);
+    padding: 12px 19px;
+}
+
+body.dark .home .text{
+    --text-color-home: #e7e7e7;
 }
 
 .sidebar.close ~ .home{
-    left: 78px;
+    color: var(--text-color-home);
+    left: 120px;
     height: 100vh;
     width: calc(100% - 78px);
 }
-body.dark .home .text{
-    color: var(--text-color);
-}
 
-
-
-
-
-
-
-
-
-.carousel {
-    background: black;
+body.dark .sidebar.close ~ .home{
+    --text-color-home: #e7e7e7;
+    left: 120px;
+    height: 100vh;
+    width: calc(100% - 78px);
 }
-  
-.carousel-cell {
-    width: 70%;
-    height: 200px;
-    /* flex-box, center image in cell */
-    display: -webkit-box;
-    display: -webkit-flex;
-    display:         flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-            justify-content: center;
-    -webkit-align-items: center;
-            align-items: center;
-}
-  
-.carousel-cell img {
-    display: block;
-    max-width: 100%;
-    max-height: 100%;
-    /* dim unselected */
-    opacity: 0.7;
-    -webkit-transform: scale(0.85);
-            transform: scale(0.85);
-    -webkit-filter: blur(5px);
-            filter: blur(5px);
-    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s, transform 0.3s, -webkit-filter 0.3s, filter 0.3s;
-            transition: opacity 0.3s, transform 0.3s, filter 0.3s;
-}
-  
-/* brighten selected image */
-.carousel-cell.is-selected img {
-    opacity: 1;
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-filter: none;
-            filter: none;
-}
-  
-@media screen and ( min-width: 768px ) {
-    .carousel-cell {
-      height: 530px;
-    }
-}
-  
-@media screen and ( min-width: 960px ) {
-    .carousel-cell {
-      width: 60%;
-    }
-}
-  
-  /* buttons, no circle */
-.flickity-prev-next-button {
-    width: 60px;
-    height: 60px;
-    background: transparent;
-    opacity: 0.6;
-}
-.flickity-prev-next-button:hover {
-    background: transparent;
-    opacity: 1;
-}
-  /* arrow color */
-.flickity-prev-next-button .arrow {
-    fill: white;
-}
-.flickity-prev-next-button.no-svg {
-    color: white;
-}
-/* closer to edge */
-.flickity-prev-next-button.previous { left: 0; }
-.flickity-prev-next-button.next { right: 0; }
-/* hide disabled button */
-.flickity-prev-next-button:disabled {
-display: none;
-}
-
