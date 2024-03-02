@@ -318,12 +318,11 @@ body.dark .home .text{
     color: var(--text-color-home);
     left: 120px;
     height: 100vh;
-    width: calc(100% - 78px);
+    width: calc(70% - 78px);
 }
 
 body.dark .sidebar.close ~ .home{
     --text-color-home: #e7e7e7;
     left: 120px;
-    height: 100vh;
-    width: calc(100% - 78px);
+    height: 100vh; 
 }
