@@ -10,17 +10,17 @@
     "icons": [
         {
             "sizes": "1024x1024",
-            "src": "assets/icon1024.png",
+            "src": "manifestIcons/icon1024.png",
             "type": "image/png"
         },
         {
             "sizes": "512x512",
-            "src": "assets/icon512.png",
+            "src": "manifestIcons/icon512.png",
             "type": "image/png"
         },
         {
             "sizes": "256x256",
-            "src": "assets/icon256.png",
+            "src": "manifestIcons/icon256.png",
             "type": "image/png"
         }
     ]
