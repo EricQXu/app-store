@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <script src="{{ url_for('static', filename='script.js') }}" type="module"></script>
+
+
+    <h1>Hello World!<br>Welcome to My First Webpage</h1>
+    <img src="static/geminiAnimation.gif">
+    <p>
+        This is my first webpage and I enjoyed building it a lot.<br>
+        I am going to build few more interesting webpages now!<br>Stay tuned!<br> 
+    </p>
+
+    <a href="{{ url_for('page2') }}">Page 2</a>
+
+</body>
+</html>

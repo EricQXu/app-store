@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ChatGPT</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <script src="{{ url_for('static', filename='genAI.js') }}" type="module"></script>
+    <a href="{{ url_for('index') }}">Back to previous page (landing page)</a>
+    <div class="input-area">
+        <input type="text" id="message" placeholder="Try asking 'Which browser is best for me?'">
+        <button id="send">
+            <span class="material-symbols-rounded">send</span>
+        </button>
+    </div>
+    <div class="chatbox" id="chatbox"></div>
+</body>
+</html>
