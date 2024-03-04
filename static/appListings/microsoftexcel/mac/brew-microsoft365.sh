@@ -3,6 +3,7 @@
 # check if Google Chrome is already installed
 # run defaults read "/Applications/Google Chrome.app/Contents/Info.plist" CFBundleIdentifier to get application id
 # "command -v brew" checks whether or not the command "brew" exists. If command "brew" exists, the output would be the full installation path of the command "brew" (a.k.a. the package homebrew). If the command "brew" does not exist, there is no output. "&> /dev/null" sends the output of the previous command to /dev/null, a special file location where all output is deleted after being ran
+# https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Office_16.53.21091200_BusinessPro_Installer.pkg
 cd /Applications
 if ls -l | grep -i "Google Chrome" &> /dev/null; then
 	echo "Google Chrome is already installed on this machine!"
