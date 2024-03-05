@@ -22,7 +22,7 @@ function sendMessage() {
     .then(function(botMessage) {
         var botDiv = document.createElement("div");
         botDiv.className = "message bot";
-        botDiv.innerHTML = "<strong>ChatGPT:</strong> " + botMessage;
+        botDiv.innerHTML = "<strong>Assistant:</strong> " + botMessage;
         chatbox.appendChild(botDiv);
         chatbox.scrollTop = chatbox.scrollHeight;
     });
