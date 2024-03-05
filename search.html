@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>App Store</title>
-    <link rel="stylesheet" href="search.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/search.css') }}">
     <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
     <!----===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
@@ -31,7 +31,7 @@
         <header>
             <div class="image-text">
                 <span class="image">
-                    <img src="logo.png" alt="">
+                    <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="">
                 </span>
 
                 <div class="text logo-text">
@@ -127,11 +127,16 @@
             <p>--------------- Search Here ------------------</p>
             <p><br><br><br><br><br><br><br></p>
             
-            <img src="geminiAnimation.gif">
+            <img src="{{ url_for('static', filename='assets/geminiAnimation.gif') }}">
             <h2>Not sure which app is right for you? Ask us!</h2>
             <h3>Powered by AI<br><br></h3>
-            <p>--Try asking "Which browser is best for me?"--<span class="material-symbols-rounded">send</span></p>
-            <p>------------------ Result --------------------</p>
+            <div class="input-area">
+                <input type="text" id="message" placeholder="Try asking 'Which browser is best for me?'">
+                <button id="send">
+                    <span class="material-symbols-rounded">send</span>
+                </button>
+            </div>
+            <div class="chatbox" id="chatbox"></div>
         </main>
     </section>
   </body>
