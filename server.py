@@ -8,6 +8,7 @@ load_dotenv()  # load env vars from .env file
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 from dotenv import load_dotenv
 from flask import Flask, render_template, request
+from flask import send_file
 
 app = Flask(__name__, template_folder='.')
 
