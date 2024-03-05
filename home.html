@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>App Store</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="flickity.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="appDescriptionStyle.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/flickity.css') }}" media="screen">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/appDescriptionStyle.css') }}">
     <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
-    <link rel="stylesheet" href="appGrid.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/appGrid.css') }}">
     <!----===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="{{url_for('static', filename='manifestIcons/icon_256x256.png')}}" type="image/png">
@@ -26,15 +26,15 @@
         });
       }
     </script>
-    <script defer src="./script.js"></script>
-    <script defer src="./flickity.pkgd.min.js"></script>
+    <script defer src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script defer src="{{ url_for('static', filename='js/flickity.pkgd.min.js.js') }}"></script>
 </head>
 <body>
     <nav class="sidebar close">
         <header>
             <div class="image-text">
                 <span class="image">
-                    <img src="logo.png" alt="">
+                    <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="">
                 </span>
 
                 <div class="text logo-text">
@@ -128,12 +128,12 @@
         <main>
             <div class="carousel js-flickity"
                 data-flickity-options='{ "draggable": false, "wrapAround": true, "autoPlay": 4000 }'>
-                <div class="carousel-cell"><a href="appListings/chrome/index.html"><img src="featuredCarousel/chrome.png" alt="chrome" /></a></div>
-                <div class="carousel-cell"><a href=”appListings/vscode/index.html”></a><img src="featuredCarousel/vsCode.png" alt="vsCode" /></a></div>
-                <!--To-do: index.html for DaVinci Resolve-->
-                <div class="carousel-cell"><a href=”appListings/resolve/index.html”></a><img src="featuredCarousel/resolve.png" alt="resolve" /></a></div>
-                <div class="carousel-cell"><a href=”appListings/steam/index.html”></a><img src="featuredCarousel/steam.png" alt="steam" /></a></div>
-                <div class="carousel-cell"><a href=”appListings/pycharm/index.html”></a><img src="featuredCarousel/pycharm.png" alt="pycharm" /></a></div>
+                <div class="carousel-cell"><a href="{{ url_for('chrome') }}"><img src="{{ url_for('static', filename='assets/featuredCarousel/chrome.png') }}" alt="chrome" /></a></div>
+                <div class="carousel-cell"><a href="{{ url_for('vscode') }}"></a><img src="{{ url_for('static', filename='assets/featuredCarousel/vsCode.png') }}" alt="vsCode" /></a></div>
+                <!-- To-do: index.html for DaVinci Resolve -->
+                <div class="carousel-cell"><a href="{{ url_for('resolve') }}"></a><img src="{{ url_for('static', filename='assets/featuredCarousel/resolve.png') }}" alt="resolve" /></a></div>
+                <div class="carousel-cell"><a href="{{ url_for('steam') }}"></a><img src="{{ url_for('static', filename='assets/featuredCarousel/steam.png') }}" alt="steam" /></a></div>
+                <div class="carousel-cell"><a href="{{ url_for('pycharm') }}"></a><img src="{{ url_for('static', filename='assets/featuredCarousel/pycharm.png') }}" alt="pycharm" /></a></div>
             </div>
             
             <h2 style="margin-left:20px; margin-top:30px; font-size:50px; padding:20px;text-align:center;" class = "TitleSizeTwo">Apps We Love</h2>
@@ -141,7 +141,7 @@
               <div class="box">
                 <div class="icon"><i class="fa fa-hand-paper-o" aria-hidden="true"></i></div>
                 <div class="content">
-                  <a href="./entertainment.html">
+                  <a href="{{ url_for('entertainment') }}">
                     <h3>Relax</h3>
                     <p><br>Looking for some games to play or shows to watch? Check out some of these free apps</p>
                   </a>
@@ -150,7 +150,7 @@
               <div class="box">
                 <div class="icon"><i class="fa fa-handshake-o" aria-hidden="true"></i></div>
                 <div class="content">
-                  <a href="./social.html">
+                  <a href="{{ url_for('social') }}">
                     <h3>Social</h3>
                     <h4>Missing your friends or family?</h4>
                     <p>Here are some social media apps we love</p>
@@ -168,8 +168,8 @@
                 <article class="testimonial grid-col-span-2 flow bg-primary-400 quote text-neutral-100">
                   <div class="flex">
                     <div>
-                     <a href="./appListings/chrome/index.html">
-                      <img src="./chrome.png" alt="Chrome">
+                     <a href="{{ url_for('chrome') }}">
+                      <img src="{{ url_for('static', filename='assets/chrome.png') }}" alt="Chrome">
                     </a>
                     </div>
                     <div>
@@ -182,7 +182,7 @@
                   <div class="flex">
                     <div>
                      <a href="./appListings/microsoft365/index.html">
-                      <img src="Microsoft365.png" alt="Microsoft 365">
+                      <img src="{{ url_for('static', filename='assets/Microsoft365.png') }}" alt="Microsoft 365">
                     </a>
                     </div>
                     <div>
@@ -195,7 +195,7 @@
                   <div class="flex">
                     <div>
                       <a href="./appListings/photoshop/index.html">
-                       <img src="Photoshop.png" alt="Photoshop">
+                       <img src="{{ url_for('static', filename='assets/Photoshop.png') }}" alt="Photoshop">
                       </a>
                     </div>
                     <div>
@@ -208,7 +208,7 @@
                   <div class="flex">
                     <div>
                      <a href="./appListings/premierepro/index.html">
-                      <img class="border-primary-400" src="PremierePro.png" alt="Premiere Pro">
+                      <img class="border-primary-400" src="{{ url_for('static', filename='assets/PremierePro.png') }}" alt="Premiere Pro">
                      </a>
                     </div>
                     <div>
@@ -221,7 +221,7 @@
                   <div class="flex">
                     <div>
                      <a href="./appListings/notion/index.html">
-                      <img src="Notion.png" alt="Notion">
+                      <img src="{{ url_for('static', filename='assets/Notion.png') }}" alt="Notion">
                      </a>
                     </div>
                     <div>
@@ -233,8 +233,8 @@
                 <article class="testimonial flow bg-vscode text-secondary-400">
                   <div class="flex">
                     <div>
-                     <a href="./appListings/vscode/index.html">
-                      <img src="VSCode.png" alt="VSCode">
+                     <a href="{{ url_for('vscode') }}">
+                      <img src="{{ url_for('static', filename='assets/VSCode.png') }}" alt="VSCode">
                      </a>
                     </div>
                     <div>

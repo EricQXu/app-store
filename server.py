@@ -53,6 +53,33 @@ def develop():
 def search():
     return render_template("search.html")
 
+# app.route for angrybirds
+
+@app.route("/chrome")
+def chrome():
+    return render_template("/static/appListings/chrome/index.html")
+
+# app.route for discord, disneyplus, everynote, ...
+
+@app.route("/pycharm")
+def pycharm():
+    return render_template("/static/appListings/pycharm/index.html")
+
+@app.route("/resolve")
+def resolve():
+    return render_template("/static/appListings/resolve/index.html")
+
+# app.route for slack, snapchat
+
+@app.route("/steam")
+def steam():
+    return render_template("/static/appListings/steam/index.html")
+
+# app.route for tiktok, twitter
+
+@app.route("/vscode")
+def vscode():
+    return render_template("/static/appListings/vscode/index.html")
 
 @app.route('/manifest.json')
 def serve_manifest():

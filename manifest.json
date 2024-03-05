@@ -1,7 +1,7 @@
 {
     "name": "App Store",
     "short_name": "market",
-    "start_url": "{{ url_for('home') }}",
+    "start_url": "home",
     "display": "standalone",
     "theme_color": "#695CFE",
     "background_color": "#E4E9F7",
