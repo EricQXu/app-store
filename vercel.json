@@ -6,11 +6,11 @@
     },
     { 
       "source": "/static/css/(.*)",
-      "destination": "/static/css/$1" 
+      "destination": "css/$1" 
     },
     {
       "source": "/static/js/(.*)",
-      "destination": "/static/js/$1" 
+      "destination": "js/$1" 
     }
   ]
 }
