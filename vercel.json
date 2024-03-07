@@ -8,12 +8,12 @@
   ],
   "routes": [
     {
-      "src": "/index.html",
-      "dest": "/"
+      "src": "/static/assets/(.*)",
+      "dest": "/static/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "/$1"
+      "dest": "/server.py"
     }
   ]
 }
