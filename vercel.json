@@ -8,6 +8,6 @@
   ],
 
   "rewrites": [
-    { "source": "/(.*)", "destination": "/server.py" }
+    { "source": "/(.*)", "destination": "/server" }
   ]
 }
