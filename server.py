@@ -1,4 +1,3 @@
-# This is the Python backend for Generative AI (ChatGPT) functions of the project
 import os
 from dotenv import load_dotenv
 from openai import OpenAI
