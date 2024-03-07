@@ -1,26 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="theme-color" content="#695CFE"/>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>App Store</title>
-    <link rel="stylesheet" href="coverStyle.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/coverStyle.css') }}">
     <!----===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="{{url_for('static', filename='manifestIcons/icon_256x256.png')}}" type="image/png">
+    <link rel="icon" href="{{url_for('static', filename='manifestIcons/icon_512x512.png')}}" type="image/png">
+    <link rel="icon" href="{{url_for('static', filename='manifestIcons/icon_1024x1024.png')}}" type="image/png">
+    <link rel="apple-touch-icon" href="{{url_for('static', filename='manifestIcons/icon_256x256.png')}}" type="image/png">
+    <link rel="apple-touch-icon" href="{{url_for('static', filename='manifestIcons/icon_512x512.png')}}" type="image/png">
+    <link rel="apple-touch-icon" href="{{url_for('static', filename='manifestIcons/icon_1024x1024.png')}}" type="image/png">
+    <link rel="manifest" href="./manifest.json">
     <script>
-      if ("serviceWorker" in navigator) {
-        window.addEventListener("load", () => {
-          navigator.serviceWorker && navigator.serviceWorker.register("./sw.js");
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register("/sw.js").then(function(registration) {
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          }, function(err) {
+            console.log('ServiceWorker registration failed: ', err);
+          });
         });
       }
     </script>
-    <script defer src="./AppStoreInstallation.js"></script>
+    <script defer src="{{ url_for('static', filename='js/AppStoreInstallation.js') }}"></script>
 </head>
 <body>
     <div class="topnav">
-        <img src="./appstorefavicon.png" width="30px">
+        <img src="static/assets/appstorefavicon.png" width="30px">
         <a href="index.html">App Store</a>
         <a class="active" href="docs.html">Docs</a>
         <a href="about.html">About</a>
@@ -32,7 +43,7 @@
     <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", function(event) {
       let coverScreenshot = document.getElementById('coverScreenshot');
-      let coverScreenshots = ['windows-mockup.png', 'mac-mockup.png', 'linux-mockup.png'].map(src => {
+      let coverScreenshots = ['static/assets/windows-mockup.png', 'static/assets/mac-mockup.png', 'static/assets/linux-mockup.png'].map(src => {
         let img = new Image();
         img.src = src;
         return img;
@@ -56,5 +67,8 @@
             <button id = "installBtn" class="btn">Install App</button>
         </div>
     </div>
+    <p style="color: #b6b6b6; font-family: monospace, monospace; text-align:right;">Flask App Store Developer Edition</p>
+    <p style="color: #88bb8d; font-family: monospace, monospace;">Developer Options: </p>
+    <a href="{{ url_for('home') }}" style="color: #889fbb; font-family: monospace, monospace;">Directly Take Me to the App Store</a>
 </body>
 </html>

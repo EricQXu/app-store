@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GarageBand</title>
+    <link rel="stylesheet" href="style.css">
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="logo.png" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">App Store</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="../../home.html">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Home</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="../../create.html">
+                            <i class='bx bx-book-alt icon' ></i>
+                            <span class="text nav-text">Create</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="../../work.html">
+                            <i class='bx bx-briefcase icon'></i>
+                            <span class="text nav-text">Work</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="../../entertainment.html">
+                            <i class='bx bx-dice-3 icon' ></i>
+                            <span class="text nav-text">Entertainment</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="../../social.html">
+                            <i class='bx bx-chat icon' ></i>
+                            <span class="text nav-text">Social</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="../../develop.html">
+                            <i class='bx bx-terminal icon' ></i>
+                            <span class="text nav-text">Develop</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+                
+            </div>
+        </div>
+
+    </nav>
+
+    <section class="home">
+        <!--You can use class "text"-->
+        <header class="pageHeader">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/DaVinci_Resolve_Studio.png" alt="app icon" style="width:85px; height:85px; align:left; margin-top:40px; margin-left:35px;">
+            <h1 style="margin-left:60px; padding:20px; margin-top:-10px" >Davinci Resolve</h1>
+            <p class="description">Holywood's #1 Post Solution</p>
+            <button onclick="downloadFile()" class="download" id="download"> Download</button>
+            <p class="incompatibleMsg" id="incompatibleMsg">&#9888; Your device isn't compatible with this app.</p>
+            <p></p>
+        </header>
+        <main>
+            <div class="slider" style="margin-left: 25px;">
+                <div class="slides">
+                    <div id="slide-1">
+                        <img id="img-1" src="https://images.blackmagicdesign.com/images/products/davinciresolve/overview/onesolution/carousel/cut.jpg" alt="Screenshot 1"/>
+                    </div>
+                    <div id="slide-2">
+                        <img id="img-2" src="https://www.dpreview.com/files/p/articles/3313009578/DaVinci-Resolve-16-Cut.png" alt="Screenshot 2"/>
+                    </div>
+                    <div id="slide-3">
+                        <img id="img-3" src="https://images.blackmagicdesign.com/images/products/davinciresolve/color/hero/hero-still.jpg" alt="Screenshot 3"/>
+                    </div>
+                    <!-- <div id="slide-4">
+                        <img id="img-4" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource114/v4/ec/21/15/ec2115a7-d972-fe59-9e29-2ef3e44b1976/c42c7b78-1226-4ce9-a229-fdfbc3823cf8_04._GB_104_Keyboard_Hero__U0028US_U0029.png/2880x0w.webp" alt="Screenshot 4"/>
+                    </div>
+                    <div id="slide-5">
+                        <img id="img-5" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource124/v4/a6/23/95/a62395c7-3a39-de13-e202-7928e1dde9e3/2b48564f-8e4d-4434-aa62-2a2b84b62be9_05._GB_104_Mixing_Hero__U0028US_U0029.png/2880x0w.webp" alt="Screenshot 5"/>
+                    </div>
+                    <div id="slide-6">
+                        <img id="img-6" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource114/v4/03/95/fc/0395fcab-2412-2b79-9d3b-798cd1b8fc59/67f1f472-6f91-4bb5-bef4-94e50ee37d08_06._GB_104_Learn_to_Play__U0028US_U0029.png/2880x0w.webp" alt="Screenshot 6"/>
+                    </div> -->
+                </div>
+            </div>
+            <h2>Description</h2>
+            <p>DaVinci Resolve is the world’s only solution that combines editing, color correction, visual effects, motion graphics and audio post production all in one software tool!
+            </p>
+            <p id="textarea" style="display:none;">DaVinci Resolve is the world’s only solution that combines editing, color correction, visual effects, motion graphics and audio post production all in one software tool! Its elegant, modern interface is fast to learn and easy for new users, yet powerful for professionals. DaVinci Resolve lets you work faster and at a higher quality because you don’t have to learn multiple apps or switch software for different tasks. That means you can work with camera original quality images throughout the entire process. It’s like having your own post production studio in a single app! Best of all, by learning DaVinci Resolve, you’re learning how to use the exact same tools used by Hollywood professionals!</p>
+            <a id="seeMore" onclick="toggleSeeMore()" href="javascript:void(0);" style="color:black; margin-left:35px;">See More</a>
+            <h2>Reviews</h2>
+            <h2>4/5</h2>
+        </main>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="expandText.js"></script>
+  </body>
+</html>

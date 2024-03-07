@@ -5,18 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>App Store</title>
-    <link rel="stylesheet" href="work.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/work.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <!----===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="{{url_for('static', filename='manifestIcons/icon_256x256.png')}}" type="image/png">
+    <link rel="icon" href="{{url_for('static', filename='manifestIcons/icon_512x512.png')}}" type="image/png">
+    <link rel="icon" href="{{url_for('static', filename='manifestIcons/icon_1024x1024.png')}}" type="image/png">
+    <link rel="apple-touch-icon" href="{{url_for('static', filename='manifestIcons/icon_256x256.png')}}" type="image/png">
+    <link rel="apple-touch-icon" href="{{url_for('static', filename='manifestIcons/icon_512x512.png')}}" type="image/png">
+    <link rel="apple-touch-icon" href="{{url_for('static', filename='manifestIcons/icon_1024x1024.png')}}" type="image/png">
+    <link rel="manifest" href="./manifest.json">
 </head>
 <body>
     <nav class="sidebar close">
         <header>
             <div class="image-text">
                 <span class="image">
-                    <img src="logo.png" alt="">
+                    <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="">
                 </span>
 
                 <div class="text logo-text">
@@ -32,48 +38,48 @@
 
                 <ul class="menu-links">
                     <li class="nav-link">
-                        <a href="home.html">
+                        <a href="{{ url_for('home') }}">
                             <i class='bx bx-home-alt icon' ></i>
                             <span class="text nav-text">Home</span>
                         </a>
                     </li>
 
                     <li class="nav-link">
-                        <a href="create.html">
+                        <a href="{{ url_for('create') }}">
                             <i class='bx bx-book-alt icon' ></i>
                             <span class="text nav-text">Create</span>
                         </a>
                     </li>
 
                     <li class="nav-link">
-                        <a href="work.html">
+                        <a href="{{ url_for('work') }}">
                             <i class='bx bx-briefcase icon'></i>
                             <span class="text nav-text">Work</span>
                         </a>
                     </li>
 
                     <li class="nav-link">
-                        <a href="entertainment.html">
+                        <a href="{{ url_for('entertainment') }}">
                             <i class='bx bx-dice-3 icon' ></i>
                             <span class="text nav-text">Entertainment</span>
                         </a>
                     </li>
 
                     <li class="nav-link">
-                        <a href="social.html">
+                        <a href="{{ url_for('social') }}">
                             <i class='bx bx-chat icon' ></i>
                             <span class="text nav-text">Social</span>
                         </a>
                     </li>
 
                     <li class="nav-link">
-                        <a href="develop.html">
+                        <a href="{{ url_for('develop') }}">
                             <i class='bx bx-terminal icon' ></i>
                             <span class="text nav-text">Develop</span>
                         </a>
                     </li>
                     <li class="nav-link">
-                        <a href="search.html">
+                        <a href="{{ url_for('search') }}">
                             <i class='bx bx-search icon' ></i>
                             <span class="text nav-text">Search</span>
                         </a>
@@ -106,18 +112,18 @@
             <img src="https://yt3.googleusercontent.com/ytc/AIf8zZQTjGhyv6zCabZQRDnnudwAJ7AoRvnucvEkhi4DSA=s900-c-k-c0x00ffffff-no-rj">
             <div class="app-content">
             <h3>Slack</h3>
-            <a href="./appListings/slack/index.html" class="btn">Details</a>
+            <a href="{{ url_for('slack') }}" class="btn">Details</a>
             </div>
             </div>
             <div class="app">
             <img src="https://pbs.twimg.com/profile_images/1278896602745274369/1neATIDG_400x400.jpg">
             <div class="app-content">
             <h3>Evernote</h3>
-            <a href="./appListings/evernote/index.html" class="btn">Details</a>
+            <a href="{{ url_for('evernote') }}" class="btn">Details</a>
             </div>
             </div>
     </section>
 
-    <script src="script.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
   </body>
 </html>

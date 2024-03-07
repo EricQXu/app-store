@@ -5,18 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>App Store</title>
-    <link rel="stylesheet" href="entertainment.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/entertainment.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <!----===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="{{url_for('static', filename='manifestIcons/icon_256x256.png')}}" type="image/png">
+    <link rel="icon" href="{{url_for('static', filename='manifestIcons/icon_512x512.png')}}" type="image/png">
+    <link rel="icon" href="{{url_for('static', filename='manifestIcons/icon_1024x1024.png')}}" type="image/png">
+    <link rel="apple-touch-icon" href="{{url_for('static', filename='manifestIcons/icon_256x256.png')}}" type="image/png">
+    <link rel="apple-touch-icon" href="{{url_for('static', filename='manifestIcons/icon_512x512.png')}}" type="image/png">
+    <link rel="apple-touch-icon" href="{{url_for('static', filename='manifestIcons/icon_1024x1024.png')}}" type="image/png">
+    <link rel="manifest" href="./manifest.json">
 </head>
 <body>
     <nav class="sidebar close">
         <header>
             <div class="image-text">
                 <span class="image">
-                    <img src="logo.png" alt="">
+                    <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="">
                 </span>
 
                 <div class="text logo-text">
@@ -32,48 +38,48 @@
 
                 <ul class="menu-links">
                     <li class="nav-link">
-                        <a href="home.html">
+                        <a href="{{ url_for('home') }}">
                             <i class='bx bx-home-alt icon' ></i>
                             <span class="text nav-text">Home</span>
                         </a>
                     </li>
 
                     <li class="nav-link">
-                        <a href="create.html">
+                        <a href="{{ url_for('create') }}">
                             <i class='bx bx-book-alt icon' ></i>
                             <span class="text nav-text">Create</span>
                         </a>
                     </li>
 
                     <li class="nav-link">
-                        <a href="work.html">
+                        <a href="{{ url_for('work') }}">
                             <i class='bx bx-briefcase icon'></i>
                             <span class="text nav-text">Work</span>
                         </a>
                     </li>
 
                     <li class="nav-link">
-                        <a href="entertainment.html">
+                        <a href="{{ url_for('entertainment') }}">
                             <i class='bx bx-dice-3 icon' ></i>
                             <span class="text nav-text">Entertainment</span>
                         </a>
                     </li>
 
                     <li class="nav-link">
-                        <a href="social.html">
+                        <a href="{{ url_for('social') }}">
                             <i class='bx bx-chat icon' ></i>
                             <span class="text nav-text">Social</span>
                         </a>
                     </li>
 
                     <li class="nav-link">
-                        <a href="develop.html">
+                        <a href="{{ url_for('develop') }}">
                             <i class='bx bx-terminal icon' ></i>
                             <span class="text nav-text">Develop</span>
                         </a>
                     </li>
                     <li class="nav-link">
-                        <a href="search.html">
+                        <a href="{{ url_for('search') }}">
                             <i class='bx bx-search icon' ></i>
                             <span class="text nav-text">Search</span>
                         </a>
@@ -106,40 +112,40 @@
                 <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/72/cd/cf/72cdcf41-c83c-1a15-93c0-1f9e3eb576eb/AppIcon-0-0-1x_U007emarketing-0-0-0-10-0-0-sRGB-0-85-220.png/460x0w.webp">
                 <div class="app-content">
                     <h3>Netflix</h3>
-                    <a href="appListings/netflix/index.html" class="btn">Details</a>
+                    <a href="{{ url_for('netflix') }}" class="btn">Details</a>
                 </div>
             </div>
         <div class="app">
             <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/13/99/75/1399750c-24ce-23bb-3b9d-1dca038de224/AppIcon-Release-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/460x0w.webp">
             <div class="app-content">
                 <h3>HBO max</h3>
-                <a href="appListings/hbomax/index.html" class="btn">Details</a>
+                <a href="{{ url_for('hbomax') }}" class="btn">Details</a>
             </div>
         </div>
         <div class="app">
             <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/bb/5d/ab/bb5dab5a-f536-c9f6-5879-38ee4423fec0/AppIcon-0-1x_U007emarketing-0-7-0-0-85-220.png/460x0w.webp">
             <div class="app-content">
                 <h3>Disney Plus</h3>
-                <a href="appListings/disneyplus/index.html" class="btn">Details</a>
+                <a href="{{ url_for('disneyplus') }}" class="btn">Details</a>
             </div>
         </div>
         <div class="app">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/2048px-Steam_icon_logo.svg.png">
             <div class="app-content">
                 <h3>Steam</h3>
-                <a href="appListings/steam/index.html" class="btn">Details</a>
+                <a href="{{ url_for('steam') }}" class="btn">Details</a>
             </div>
         </div>
         <div class="app">
             <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/4e/72/c5/4e72c55f-d4b4-e0bc-4ee5-31a2fa2561ab/PlayerIcon.png/460x0w.webp">
             <div class="app-content">
                 <h3>Angry Birds</h3>
-                <a href="appListings/angrybirds/index.html" class="btn">Details</a>
+                <a href="{{ url_for('angrybirds') }}" class="btn">Details</a>
             </div>
         </div>
     </section>
     </section>
 
-    <script src="script.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
   </body>
 </html>
