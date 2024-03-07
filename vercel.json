@@ -1,11 +1,19 @@
 {
+  "version": 2,
+  "builds": [
+      {
+          "src": "./server.py",
+          "use": "@vercel/python"
+      }
+  ],
   "rewrites": [
     { "source": "/static/(.*)", "destination": "/static/$1" },
-    { "source": "/(.*)", "destination": "/index" }
+    { "source": "/(.*)", "destination": "/$1" }
   ],
   "routes": [
-    { "handle": "filesystem" },
-    { "src": "/static/(.*)", "dest": "/static/$1" },
-    { "src": "/(.*)", "dest": "/index" }
+      {
+          "src": "/(.*)",
+          "dest": "/"
+      }
   ]
 }
