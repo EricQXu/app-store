@@ -5,18 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>App Store</title>
-    <link rel="stylesheet" href="develop.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/develop.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <!----===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="{{url_for('static', filename='manifestIcons/icon_256x256.png')}}" type="image/png">
+    <link rel="icon" href="{{url_for('static', filename='manifestIcons/icon_512x512.png')}}" type="image/png">
+    <link rel="icon" href="{{url_for('static', filename='manifestIcons/icon_1024x1024.png')}}" type="image/png">
+    <link rel="apple-touch-icon" href="{{url_for('static', filename='manifestIcons/icon_256x256.png')}}" type="image/png">
+    <link rel="apple-touch-icon" href="{{url_for('static', filename='manifestIcons/icon_512x512.png')}}" type="image/png">
+    <link rel="apple-touch-icon" href="{{url_for('static', filename='manifestIcons/icon_1024x1024.png')}}" type="image/png">
+    <link rel="manifest" href="./manifest.json">
 </head>
 <body>
     <nav class="sidebar close">
         <header>
             <div class="image-text">
                 <span class="image">
-                    <img src="logo.png" alt="">
+                    <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="">
                 </span>
 
                 <div class="text logo-text">
@@ -107,16 +113,17 @@
         <img src="https://yt3.googleusercontent.com/_q52i8bUAEvcb7JR4e-eNTv23y2A_wg5sCz0NC0GrGtcw1CRMWJSOPVHUDh_bngD0q4gMvVeoA=s900-c-k-c0x00ffffff-no-rj">
         <div class="app-content">
         <h3>Visual Studio Code</h3>
-        <a href="./appListings/vscode/index.html" class="btn">Details</a>
+        <a href="{{ url_for('vscode') }}" class="btn">Details</a>
         </div>
         </div>
         <div class="app">
         <img src="https://www.jetbrainsmerchandise.com/media/catalog/product/cache/9de2cbab405d38079f6e94f2fde72752/j/b/jbst-016_pycharm_2.png">
         <div class="app-content">
         <h3>PyCharm</h3>
-        <a href="./appListings/pycharm/index.html" class="btn">Details</a>
+        <a href="{{ url_for('pycharm') }}" class="btn">Details</a>
         </div>
         </div>
-    <script src="script.js"></script>
-  </body>
+
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    </body>
 </html>

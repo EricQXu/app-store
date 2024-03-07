@@ -47,7 +47,7 @@ def social():
 
 @app.route("/develop")
 def develop():
-    return render_template("home.html")
+    return render_template("develop.html")
 
 @app.route("/search")
 def search():
