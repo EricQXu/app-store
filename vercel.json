@@ -6,14 +6,8 @@
       "use": "@vercel/python"
     }
   ],
-  "routes": [
-    {
-      "src": "/static/assets/(.*)",
-      "dest": "/static/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/server.py"
-    }
+
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/server.py" }
   ]
 }
