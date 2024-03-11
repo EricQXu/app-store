@@ -1,16 +1,17 @@
 {
-  "rewrites": [
-    { 
-      "source": "/(.*)",
-      "destination": "/server" 
-    },
-    { 
-      "source": "/static/css/(.*)",
-      "destination": "/static/css/$1.css" 
+  "build": {
+    "env": {
+      "FLASK_ENV": "development"
+    }
+  },
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
     },
     {
-      "source": "/static/js/(.*)",
-      "destination": "/static/js/$1.js" 
+      "src": "/(.*)",
+      "dest": "/server.py"
     }
   ]
 }
