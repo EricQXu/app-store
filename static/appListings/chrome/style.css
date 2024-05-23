@@ -167,7 +167,7 @@ body.dark .sidebar header .toggle{
     margin-top: 40px;
 }
 
-.sidebar {
+/* .sidebar {
     height: 100%;
     width: 100%;
     outline: none;
@@ -178,7 +178,7 @@ body.dark .sidebar header .toggle{
     font-size: 17px;
     font-weight: 500;
     transition: var(--tran-05);
-}
+} */
 .sidebar li a{
     list-style: none;
     height: 100%;
