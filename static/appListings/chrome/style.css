@@ -167,7 +167,7 @@ body.dark .sidebar header .toggle{
     margin-top: 40px;
 }
 
-.sidebar input{
+.sidebar {
     height: 100%;
     width: 100%;
     outline: none;
