@@ -459,8 +459,8 @@ img {
 }
 
 /* Don't need button navigation */
-@supports (scroll-snap-type) {
-  .slider > a {
-    display: none;
-  }
+@supports (scroll-snap-type: y mandatory) {
+    .slider > a {
+        display: none;
+    }
 }
