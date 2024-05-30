@@ -29,11 +29,6 @@
         <div class="menu-bar">
             <div class="menu">
 
-                <li class="search-box">
-                    <i class='bx bx-search icon'></i>
-                    <input type="text" placeholder="Search...">
-                </li>
-
                 <ul class="menu-links">
                     <li class="nav-link">
                         <a href="{{ url_for('home') }}">
@@ -74,6 +69,13 @@
                         <a href="{{ url_for('develop') }}">
                             <i class='bx bx-terminal icon' ></i>
                             <span class="text nav-text">Develop</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="{{ url_for('search') }}">
+                            <i class='bx bx-search icon' ></i>
+                            <span class="text nav-text">Search</span>
                         </a>
                     </li>
 
