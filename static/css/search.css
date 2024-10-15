@@ -20,6 +20,7 @@
   
   .input-area.rainbow-glow {
     animation: rainbow-glow 5s linear infinite;
+    border-radius: 300px;
 }
 
 :root{
