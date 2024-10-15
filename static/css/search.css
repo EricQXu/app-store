@@ -7,6 +7,21 @@
     font-family: 'Poppins', sans-serif;
 }
 
+@keyframes rainbow-glow {
+    0% { box-shadow: 0 0 10px rgba(255, 0, 0, 0.7); }
+    14% { box-shadow: 0 0 10px rgba(255, 127, 0, 0.7); }
+    28% { box-shadow: 0 0 10px rgba(255, 255, 0, 0.7); }
+    42% { box-shadow: 0 0 10px rgba(0, 255, 0, 0.7); }
+    57% { box-shadow: 0 0 10px rgba(0, 0, 255, 0.7); }
+    71% { box-shadow: 0 0 10px rgba(75, 0, 130, 0.7); }
+    85% { box-shadow: 0 0 10px rgba(143, 0, 255, 0.7); }
+    100% { box-shadow: 0 0 10px rgba(255, 0, 0, 0.7); }
+  }
+  
+  .input-area.rainbow-glow {
+    animation: rainbow-glow 5s linear infinite;
+}
+
 :root{
     /* ===== Colors ===== */
     --body-color: #050305;
